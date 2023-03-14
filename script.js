@@ -2,26 +2,35 @@
  * TODO: Implement a function that clears all the content
  * prior to generating new random content
  */
-function clearAll() {}
-
-/**
- * TODO:
- * - Show a random Meme in the correct location
- * - Never show more than 1 meme at a time
- */
-function showMeme() {
-  // Value is a string representing image URL
-  const randomMemeUrl = getRandomData("memes");
+function clearAll() {
+  const memeContainer = document.querySelector('.meme-content')
+  const jokeContainer = document.querySelector('.joke-content')
+  const quoteContainer = document.querySelector('.quote-content')
+  const riddleContainer = document.querySelector('.riddle-content')
+      
+  memeContainer.innerHTML=''
+  jokeContainer.innerHTML=''
+  quoteContainer.innerHTML=''
+  riddleContainer.innerHTML=''
 }
 
-/**
- * TODO:
- * - Show a random joke in the correct location
- * - Never show more than 1 joke at a time
- */
+
+function showMeme() {
+  clearAll()
+  const randomMemeUrl = getRandomData('memes');
+  const container = document.querySelector('.meme-content')
+  const newImg = document.createElement('img');
+  newImg.setAttribute('src', randomMemeUrl);
+  container.appendChild(newImg)
+}
+
+
 function showJoke() {
-  // Value is a string representing the joke
-  const randomJokeText = getRandomData("jokes");
+  clearAll()
+  const randomJokeText = getRandomData('jokes');
+  const newP = document.createElement('p');
+  newP.textContent = randomJokeText
+  const container = document.querySelector('.meme-content').appendChild(newP)
 }
 
 /**
