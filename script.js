@@ -70,16 +70,20 @@ function showRiddle() {
 
 }
 
-/**
- * TODO: Unhide the riddle's answer
- * - If there is no riddle shown, alert the user that there is no riddle
- * - If there is a riddle shown and an answer shown, alert the user
- *   that the answer is already revealed
- * - If there is a riddle shown but no answer, unhide the answer!
- */
+
 function revealAnswers() {
-  const container = document.querySelector('.hidden-answer')
-  container.hidden = false
+  const answer = document.querySelector('.hidden-answer')
+
+  const riddle = document.querySelector('.riddle-content')
+  const isRiddle = riddle.querySelector('p')
+
+  if (isRiddle && answer.hidden == false) {
+    alert('The answer is already revealed')
+  } else if (isRiddle && answer.hidden == true) {
+    answer.hidden = false
+  } else {
+    alert('There is no riddle')
+  }
 
 }
 
