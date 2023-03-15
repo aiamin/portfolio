@@ -56,7 +56,7 @@ function showRiddle() {
   const answerElement = document.createElement('p')
 
   questionElement.textContent = question
-  answerElement.textContent = answer
+  answerElement.textContent = 'The answer is: ' + answer
 
   answerElement.hidden = true
   answerElement.className = 'hidden-answer'
