@@ -11,14 +11,14 @@
 //   }
 // }
 
-function App() {
-  return (
-    <>
-      <h1>Hello From Function Component</h1>
-      <h2>Class Component</h2>
-    </>
-  );
-}
+// function App() {
+//   return (
+//     <>
+//       <h1>Hello From Function Component</h1>
+//       <h2>Class Component</h2>
+//     </>
+//   );
+// }
 
 
-export default App;
+// export default App;

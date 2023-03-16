@@ -1,7 +1,6 @@
-// import React from 'react';
 import ReactDOM from "react-dom";
-import App from "./app";
+import Product from "./components/product";
+import "bootstrap/dist/css/bootstrap.min.css";
+import NewFunction from "./components/new";
 
-const element = <h1>Hello World!</h1>;
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<NewFunction />, document.getElementById("root"));
