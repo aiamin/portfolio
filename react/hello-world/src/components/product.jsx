@@ -5,28 +5,18 @@ const Product = () => {
 
   return (
     <>
-      <div>
-        {" "}
-        <span className="m-2 text-info">laptop</span>
-        <span className="m-2 badge bg-primary">{format()}</span>
-      </div>
-      <div>
-        <button
-          onClick={handleIncrement}
-          className="m-2 btn btn-sm btn-success"
-        >
-          +
-        </button>
-        <button
-          onClick={handleDecrement}
-          className="m-2 btn btn-sm btn-warning"
-        >
-          -
-        </button>
-        <button onClick={handleDelete} className="m-2 btn btn-sm btn-danger">
-          delete
-        </button>
-      </div>
+      <div>      <span className="m-2 text-info">laptop</span>
+      <span className="m-2 badge bg-primary">{format()}</span></div>
+    <div><button onClick={handleIncrement} className="m-2 btn btn-sm btn-success">
+        +
+      </button>
+      <button onClick={handleDecrement} className="m-2 btn btn-sm btn-warning">
+        -
+      </button>
+      <button onClick={handleDelete} className="m-2 btn btn-sm btn-danger">
+        delete
+      </button></div>
+      
     </>
   );
 
@@ -39,7 +29,7 @@ const Product = () => {
   }
 
   function handleDelete() {
-    setCount((count = 0));
+    setCount(count = 0);
   }
 
   function format() {
